@@ -16,3 +16,14 @@ The [Elm Language Server](https://github.com/elm-tooling/elm-language-server) on
 What's needed: typescript, lsp, vscode, elm
 
 Possible mentor: TBD
+
+## Improve pure Elm markdown parser
+The current standard markdown parser in Elm, [`elm-explorations/markdown`](http://github.com/elm-explorations/markdown), is a wrapper around marked.js. It is not written in pure Elm, requires a global hljs script to work with syntax highlighting, and [uses an outdated version of marked.js](https://github.com/elm-explorations/markdown/issues/6).
+
+[`dillonkearns/elm-markdown`](https://github.com/dillonkearns/elm-markdown) is a pure Elm markdown parser, and [is built to be extensible](https://elm-pages.com/blog/extensible-markdown-parsing-in-elm). `dillonkearns/elm-markdown` is currently used for a lot of `elm-pages` applications, but there are still some core missing parsing features. It would be great to get that project to the point that it can become the standard markdown parsing library for projects like [the Elm package site](https://github.com/elm/package.elm-lang.org/blob/6e004897f23ffeb71b5d283f1d0042b64ff20a41/src/frontend/Utils/Markdown.elm#L7-L14) and other Elm apps.
+
+There are some parsing areas that are not yet implemented, see [automated markdown spec failures](https://github.com/dillonkearns/elm-markdown/tree/master/test-results/failing/GFM), and the [open issues](https://github.com/dillonkearns/elm-markdown/issues). Goal: get the automated spec tests passing, and clarify places where it needs to diverge from the spec because of its specific handling of HTML for extensibility.
+
+What's needed: elm, parsing, markdown
+
+Possible mentor: Dillon Kearns
