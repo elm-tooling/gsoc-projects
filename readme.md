@@ -75,13 +75,23 @@ What's needed: tree sitter, haskell
 
 Possible mentor: TBD
 
+Difficulty: Hard
+
 
 ## Improving test integration in the elm languague server
-The [Elm Language Server](https://github.com/elm-tooling/elm-language-server) only has a simple test integration at the moment, consisting of [elm-test](https://github.com/rtfeldman/node-test-runner) being used to parse and validate test files. It would be nice to actually be able to run tests from code lenses or a dedicated test panel. Being able to run single tests or groups (might need changes in elm-test) and getting a nice summary of what happened. Coverage integration could be a strech goal.
+The [Elm Language Server](https://github.com/elm-tooling/elm-language-server) only has a simple test integration at the moment, consisting of [elm-test](https://github.com/rtfeldman/node-test-runner) being used to parse and validate test files. 
+
+It would be nice to actually be able to run tests from code lenses or a dedicated test panel. Being able to run single tests or groups (might need changes in elm-test) and getting a nice summary of what happened. Coverage integration could be a strech goal.
+
+See these extensions as a reference:
+[Java Test Runner by Microsoft](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-test)
+[.NET Core Test Explorer](https://marketplace.visualstudio.com/items?itemName=formulahendry.dotnet-test-explorer)
 
 What's needed: typescript, lsp, vscode, elm
 
-Possible mentor: TBD
+Possible mentor: Razzeee
+
+Difficulty: Medium
 
 ## Improve pure Elm markdown parser
 The current standard markdown parser in Elm, [`elm-explorations/markdown`](http://github.com/elm-explorations/markdown), is a wrapper around marked.js. It is not written in pure Elm, requires a global hljs script to work with syntax highlighting, and [uses an outdated version of marked.js](https://github.com/elm-explorations/markdown/issues/6).
@@ -93,3 +103,5 @@ There are some parsing areas that are not yet implemented, see [automated markdo
 What's needed: elm, parsing, markdown
 
 Possible mentor: Dillon Kearns
+
+Difficulty: ??
