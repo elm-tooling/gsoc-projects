@@ -8,6 +8,7 @@
   * [Semantic parser](#semantic-parser)
   * [Improving test integration in the elm languague server](#improving-test-integration-in-the-elm-languague-server)
   * [Improve pure Elm markdown parser](#improve-pure-elm-markdown-parser)
+  * [Smart generators in the language server](#smart-generators-in-the-language-server)
 
 # About us
 
@@ -105,3 +106,7 @@ What's needed: elm, parsing, markdown
 Possible mentor: Dillon Kearns
 
 Difficulty: ??
+
+
+## Smart generators in the language server
+See this issue for in depth discussions https://github.com/elm-tooling/gsoc-projects/issues/1
