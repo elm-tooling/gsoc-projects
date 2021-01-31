@@ -9,6 +9,7 @@
   * [Improving test integration in the elm languague server](#improving-test-integration-in-the-elm-languague-server)
   * [Improve pure Elm markdown parser](#improve-pure-elm-markdown-parser)
   * [Smart generators in the language server](#smart-generators-in-the-language-server)
+  * [Notebook support for VSCode](#notebook-support-for-vscode)
 
 # About us
 
@@ -90,7 +91,7 @@ See these extensions as a reference:
 
 What's needed: typescript, lsp, vscode, elm
 
-Possible mentor: Razzeee
+Possible mentor: Kolja Lampe (razzeee)
 
 Difficulty: Medium
 
@@ -105,8 +106,16 @@ What's needed: elm, parsing, markdown
 
 Possible mentor: Dillon Kearns
 
-Difficulty: ??
+Difficulty: Easy
 
 
 ## Smart generators in the language server
 See this issue for in depth discussions https://github.com/elm-tooling/gsoc-projects/issues/1
+
+
+## Notebook support for VSCode
+We would like to support Elm Notebooks, for datascience and similar. One path for this to get easier would be implementing the proposed vscode api here: https://code.visualstudio.com/api/extension-guides/notebook
+
+Possible Mentor: Kolja Lampe (razzeee)
+
+Difficulty: Medium
