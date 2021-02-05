@@ -89,6 +89,8 @@ See these extensions as a reference:
 [Java Test Runner by Microsoft](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-test)
 [.NET Core Test Explorer](https://marketplace.visualstudio.com/items?itemName=formulahendry.dotnet-test-explorer)
 
+Microsoft is also working on an official api, which we could implement (even if it's just proposed right now): https://github.com/microsoft/vscode/issues/107467
+
 What's needed: typescript, lsp, vscode, elm
 
 Possible mentor: Kolja Lampe (razzeee)
