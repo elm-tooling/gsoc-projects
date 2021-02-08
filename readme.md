@@ -10,6 +10,7 @@
   * [Improve pure Elm markdown parser](#improve-pure-elm-markdown-parser)
   * [Smart generators in the language server](#smart-generators-in-the-language-server)
   * [Notebook support for VSCode](#notebook-support-for-vscode)
+  * [Org mode parser for Emacs](#org-mode-parser-for-emacs)
 
 # About us
 
@@ -120,4 +121,14 @@ We would like to support Elm Notebooks, for datascience and similar. One path fo
 
 Possible Mentor: Kolja Lampe (razzeee)
 
+Difficulty: Medium
+
+## Org mode parser for Emacs
+
+A GNU Emacs major mode for convenient plain text markup — and much more. Org mode is for keeping notes, maintaining to-do lists, planning projects, authoring documents, computational notebooks, literate programming and more — in a fast and effective plain text system.
+
+[orgmode.org](https://orgmode.org/)
+
+What's needed: Elm, Parsing, Org mode
+Possible mentor: Andrey Koppel (akoppela)
 Difficulty: Medium
