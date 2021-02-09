@@ -10,6 +10,7 @@
   * [Improve pure Elm markdown parser](#improve-pure-elm-markdown-parser)
   * [Smart generators in the language server](#smart-generators-in-the-language-server)
   * [Notebook support for VSCode](#notebook-support-for-vscode)
+  * [Integrating performance improvements into Elm's source code formatter](#integrating-performance-improvements-into-elms-source-code-formatter)
 
 # About us
 
@@ -119,5 +120,24 @@ See this issue for in depth discussions https://github.com/elm-tooling/gsoc-proj
 We would like to support Elm Notebooks, for datascience and similar. One path for this to get easier would be implementing the proposed vscode api here: https://code.visualstudio.com/api/extension-guides/notebook
 
 Possible Mentor: Kolja Lampe (razzeee)
+
+Difficulty: Medium
+
+
+## Integrating performance improvements into Elm's source code formatter 
+
+The standard source code formatter for Elm, [elm-format](https://github.com/avh4/elm-format), is based on the Elm compiler's parsing code from Elm 0.15.
+In Elm 0.19, the Elm compiler's parser was rewritten to eliminate the heavy dependency on [parsec](https://hackage.haskell.org/package/parsec) and to greatly improve speed and reduce memory use.
+The new parsing code cannot be used as-is by elm-format because elm-format's parser has been extended to preserve comments and (some) whitespace information and to automatically correct some common mistakes.
+The proposed project is to integrate the new parsing code into elm-format so that it can benefit from the speed and memory use benefits.
+
+Tentative goals:
+1. Replace elm-format's dependency on parsec with an adapter module (which will need to be written) that implements (a subset of) the parsec API on top of the new Elm parser API.
+2. (optional) Benchmark elm-format's performance before and after the change.
+3. For some or all of the AST types, update their corresponding parsers to use the new parser API directly and remove the need for the adapter module.
+
+What's needed: Haskell
+
+Possible mentor: Aaron VonderHaar (avh4)
 
 Difficulty: Medium
