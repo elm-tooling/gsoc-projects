@@ -15,7 +15,7 @@
 
 We're an organization focusing on the functional progamming language [Elm](https://elm-lang.org/). We're not working on the compiler, but on things that are related to tooling for the ecosystem and other improvements for users of the language.
 
-So far this organization owns a parser/lexer for Elm, a language server which in a good state, and additional packages, that make working with Elm a breeze. Most of these are written in Typescript or Elm.
+So far this organization owns a parser/lexer for Elm, a language server which is in a good state, and additional packages, that make working with Elm a breeze. Most of these are written in Typescript or Elm, but we do have some Haskell too.
 
 If we're selected as a mentoring organization for 2021, students will need to review the overview of a good project proposal, follow the outline for proposals when applying, and review the list of project ideas detailed below. Students are welcome to propose ideas outside the list and are encouraged to be as creative as they like.
 
