@@ -6,7 +6,7 @@
   * [Proposal outline](#proposal-outline)
 - [Ideas for discussion](#ideas-for-discussion)
   * [Semantic parser](#semantic-parser)
-  * [Improving test integration in the elm languague server](#improving-test-integration-in-the-elm-languague-server)
+  * [Improving test integration in the elm language server](#improving-test-integration-in-the-elm-language-server)
   * [Improve pure Elm markdown parser](#improve-pure-elm-markdown-parser)
   * [Smart generators in the language server](#smart-generators-in-the-language-server)
   * [Notebook support for VSCode](#notebook-support-for-vscode)
@@ -80,7 +80,7 @@ Possible mentor: TBD
 Difficulty: Hard
 
 
-## Improving test integration in the elm languague server
+## Improving test integration in the elm language server
 The [Elm Language Server](https://github.com/elm-tooling/elm-language-server) only has a simple test integration at the moment, consisting of [elm-test](https://github.com/rtfeldman/node-test-runner) being used to parse and validate test files. 
 
 It would be nice to actually be able to run tests from code lenses or a dedicated test panel. Being able to run single tests or groups (might need changes in elm-test) and getting a nice summary of what happened. Coverage integration could be a strech goal.
