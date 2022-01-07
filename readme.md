@@ -5,12 +5,8 @@
   * [Where to submit proposals](#where-to-submit-proposals)
   * [Proposal outline](#proposal-outline)
 - [Ideas for discussion](#ideas-for-discussion)
-  * [Semantic parser](#semantic-parser)
-  * [Improving test integration in the elm language server](#improving-test-integration-in-the-elm-language-server)
-  * [Improve pure Elm markdown parser](#improve-pure-elm-markdown-parser)
   * [Smart generators in the language server](#smart-generators-in-the-language-server)
   * [Notebook support for VSCode](#notebook-support-for-vscode)
-  * [Integrating performance improvements into Elm's source code formatter](#integrating-performance-improvements-into-elms-source-code-formatter)
 
 # About us
 
@@ -68,49 +64,6 @@ PROJECT TITLE GOES HERE
 
 # Ideas for discussion
 
-## Semantic parser
-Writing a [semantic](https://github.com/github/semantic) parser for Elm will hopefully help getting github to be much smarter about Elm code in the future.
-
-More info can be found here: [Adding new languages](https://github.com/github/semantic/blob/master/docs/adding-new-languages.md)
-
-What's needed: tree sitter, haskell
-
-Possible mentor: TBD
-
-Difficulty: Hard
-
-
-## Improving test integration in the elm language server
-The [Elm Language Server](https://github.com/elm-tooling/elm-language-server) only has a simple test integration at the moment, consisting of [elm-test](https://github.com/rtfeldman/node-test-runner) being used to parse and validate test files. 
-
-It would be nice to actually be able to run tests from code lenses or a dedicated test panel. Being able to run single tests or groups (might need changes in elm-test) and getting a nice summary of what happened. Coverage integration could be a strech goal.
-
-See these extensions as a reference:
-[Java Test Runner by Microsoft](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-test)
-[.NET Core Test Explorer](https://marketplace.visualstudio.com/items?itemName=formulahendry.dotnet-test-explorer)
-
-Microsoft is also working on an official api, which we could implement (even if it's just proposed right now): https://github.com/microsoft/vscode/issues/107467
-
-What's needed: typescript, lsp, vscode, elm
-
-Possible mentor: Kolja Lampe (razzeee)
-
-Difficulty: Medium
-
-## Improve pure Elm markdown parser
-The current standard markdown parser in Elm, [`elm-explorations/markdown`](http://github.com/elm-explorations/markdown), is a wrapper around marked.js. It is not written in pure Elm, requires a global hljs script to work with syntax highlighting, and [uses an outdated version of marked.js](https://github.com/elm-explorations/markdown/issues/6).
-
-[`dillonkearns/elm-markdown`](https://github.com/dillonkearns/elm-markdown) is a pure Elm markdown parser, and [is built to be extensible](https://elm-pages.com/blog/extensible-markdown-parsing-in-elm). `dillonkearns/elm-markdown` is currently used for a lot of `elm-pages` applications, but there are still some core missing parsing features. It would be great to get that project to the point that it can become the standard markdown parsing library for projects like [the Elm package site](https://github.com/elm/package.elm-lang.org/blob/6e004897f23ffeb71b5d283f1d0042b64ff20a41/src/frontend/Utils/Markdown.elm#L7-L14) and other Elm apps.
-
-There are some parsing areas that are not yet implemented, see [automated markdown spec failures](https://github.com/dillonkearns/elm-markdown/tree/master/test-results/failing/GFM), and the [open issues](https://github.com/dillonkearns/elm-markdown/issues). Goal: get the automated spec tests passing, and clarify places where it needs to diverge from the spec because of its specific handling of HTML for extensibility.
-
-What's needed: elm, parsing, markdown
-
-Possible mentor: Dillon Kearns
-
-Difficulty: Easy
-
-
 ## Smart generators in the language server
 See this issue for in depth discussions https://github.com/elm-tooling/gsoc-projects/issues/1
 
@@ -123,20 +76,3 @@ Possible Mentor: Kolja Lampe (razzeee)
 Difficulty: Medium
 
 
-## Integrating performance improvements into Elm's source code formatter 
-
-The standard source code formatter for Elm, [elm-format](https://github.com/avh4/elm-format), is based on the Elm compiler's parsing code from Elm 0.15.
-In Elm 0.19, the Elm compiler's parser was rewritten to eliminate the heavy dependency on [parsec](https://hackage.haskell.org/package/parsec) and to greatly improve speed and reduce memory use.
-The new parsing code cannot be used as-is by elm-format because elm-format's parser has been extended to preserve comments and (some) whitespace information and to automatically correct some common mistakes.
-The proposed project is to integrate the new parsing code into elm-format so that it can benefit from the speed and memory use benefits.
-
-Tentative goals:
-1. Replace elm-format's dependency on parsec with an adapter module (which will need to be written) that implements (a subset of) the parsec API on top of the new Elm parser API.
-2. (optional) Benchmark elm-format's performance before and after the change.
-3. For some or all of the AST types, update their corresponding parsers to use the new parser API directly and remove the need for the adapter module.
-
-What's needed: Haskell
-
-Possible mentor: Aaron VonderHaar (avh4)
-
-Difficulty: Medium
